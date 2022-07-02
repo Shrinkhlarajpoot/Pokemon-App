@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { usePokemonList } from '../context/ListContext';
+import { usePokemonList } from '../context/pokemonlistContext';
 import { v4 } from 'uuid';
 import InfiniteScroll from 'react-infinite-scroll-component';
-import PokemonDetails from './PokemonDetails';
+import PokemonDetails from '../components/PokemonDetails/PokemonDetails';
 import axios from 'axios';
 
 const PokemonsList = () => {
@@ -18,7 +18,6 @@ const PokemonsList = () => {
         const response = await axios.get(
           ` https://pokeapi.co/api/v2/pokemon/${pokemon.name}`
         );
-
         setPokemons((currentList) => [...currentList, response?.data]);
       });
     }

@@ -1,0 +1,40 @@
+.search__bar {
+    position: relative;
+    width:40%;
+    border-radius: 5px;
+}
+
+.search__bar .search__input {
+    padding: 0.3rem;
+    padding-left: 1.2rem;
+    border: 1px solid blue;
+    border-radius: 2px;
+    min-width:40%;
+}
+
+.search__bar .search__input:focus {
+    outline: var(--tertiary-color-shade-1);
+}
+.user-info {
+    display: flex;
+    padding: 1rem;
+    color:blue;
+  }
+.user-info >*{
+    margin:0 2rem;
+}
+.logout-btn {
+    background-color: white;
+    color: blue;
+    border: transparent;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+.logout-btn:hover{
+    color:black;
+    background-color: blue;
+}
+
+

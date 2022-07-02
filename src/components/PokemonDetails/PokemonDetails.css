@@ -1,0 +1,31 @@
+
+.rock {
+    background-color: rgb(148, 81, 81);
+  }
+  .ghost {
+    background-color: rgb(247, 247, 247);
+  }
+  .electric {
+    background-color: #fde68a;
+  }
+  .bug {
+    background-color: #fed7aa;
+  }
+  .poison {
+    background-color: #c4b5fd;
+  }
+  .normal {
+    background-color: #f4f4f4;
+  }
+  .fairy {
+    background-color: rgba(255, 192, 203, 0.863);
+  }
+  .fire {
+    background-color: #fca5a5;
+  }
+  .grass {
+    background-color: #86efac;
+  }
+  .water {
+    background-color: #7dd3fc;
+  }

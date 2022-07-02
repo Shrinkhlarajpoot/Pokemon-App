@@ -1,18 +1,18 @@
 .search__bar {
     position: relative;
+    width:40%;
+    border-radius: 5px;
 }
 
 .search__bar .search__input {
     padding: 0.3rem;
     padding-left: 1.2rem;
-    border: 1px solid var(--tertiary-color);
+    border: 1px solid blue;
     border-radius: 2px;
+    min-width:40%;
 }
 
 .search__bar .search__input:focus {
     outline: var(--tertiary-color-shade-1);
 }
 
-.search__bar .search__bar__backdrop {
-    top: 3rem;
-}

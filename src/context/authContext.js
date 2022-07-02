@@ -2,17 +2,14 @@ import React, { useState } from 'react';
 import { useGoogleLogin } from 'react-use-googlelogin';
 import { useNavigate } from 'react-router-dom';
 const GoogleAuthContext = React.createContext();
-
 export const GoogleAuthProvider = ({ children }) => {
   const navigate = useNavigate();
   const googleAuth = useGoogleLogin({
     clientId: process.env.REACT_APP_CLIENT_ID,
   });
-
-  const { token: savedToken } = JSON.parse(localStorage?.getItem('login')) || {
+ const { token: savedToken } = JSON.parse(localStorage?.getItem('login')) || {
     token: null,
   };
-
   const [token, setToken] = useState(savedToken);
   const name = googleAuth?.googleUser?.profileObj?.name;
   const email = googleAuth?.googleUser?.profileObj?.email;
@@ -25,8 +22,7 @@ export const GoogleAuthProvider = ({ children }) => {
   };
   const loginUser = ({ token }) => {
     setToken(token);
-
-    localStorage.setItem(
+     localStorage.setItem(
       'login',
       JSON.stringify({
         token,
@@ -35,9 +31,7 @@ export const GoogleAuthProvider = ({ children }) => {
   };
   const userLogout = async () => {
     localStorage.removeItem('login');
-
     setToken('');
-
     navigate('/');
   };
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useGoogleAuth } from '../context/GoogleAuthContext';
+import { useGoogleAuth } from '../context/authContext';
 const LogoutButton = () => {
   const { googleAuth, userLogout } = useGoogleAuth();
   const clickHandler = async () => {

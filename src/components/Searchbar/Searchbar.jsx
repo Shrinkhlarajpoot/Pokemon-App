@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
+import { usePokemonList } from "../../context/pokemonlistContext";
 import "./Searchbar.css";
-import { usePokemonList } from "../context/ListContext";
+
 export const Searchbar = () => {
 	const { search, setSearch, pokemons, setFilteredArr } = usePokemonList();
 	useEffect(() => {
 		const searchResult = pokemons?.filter((pokemon) =>
 			pokemon?.name?.toLowerCase().includes(search.toLowerCase())
 		);
-
-		setFilteredArr(searchResult);
+      setFilteredArr(searchResult);
 	}, [pokemons, search, setFilteredArr]);
 	return (
 		<div>

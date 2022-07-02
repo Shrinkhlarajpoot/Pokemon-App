@@ -1,13 +1,13 @@
 import React from 'react';
-import { usePokemonList } from '../context/ListContext';
-import SavedDetails from './SavedDetails';
+import { usePokemonList } from '../context/pokemonlistContext';
+import SavedDetails from '../components/SavedDetails';
 import { v4 } from 'uuid';
 
 const SavedPokemon = () => {
   const { savedPokemon } = usePokemonList();
   return (
     <>
-      <h1>Saved Pokemons</h1>
+      <h1>{savedPokemon?.length ? "Saved Pokemons":null}</h1>
       {savedPokemon?.length > 0 ? (
         <div className='saved-pokemon-container'>
           {savedPokemon?.map((pokemon) => {
@@ -26,7 +26,7 @@ const SavedPokemon = () => {
         </div>
       ) : (
         <div className='empty-container'>
-          No pokemon caught yet. Go catch 'em all.
+         No Saved Pokemons..
         </div>
       )}
     </>
